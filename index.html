@@ -1257,6 +1257,86 @@
     .scroll-top:hover { background: #90ab1e; }
 
     /* ══════════════════════════════════════════
+       HAMBURGER + MOBILE MENU
+    ══════════════════════════════════════════ */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 10px;
+      margin-right: -10px;
+      z-index: 201;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--obsidian);
+      border-radius: 1px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 76px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 199;
+      flex-direction: column;
+      padding: 24px 28px 40px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--obsidian);
+      letter-spacing: -0.01em;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(10,18,10,0.07);
+      display: block;
+      transition: color 0.2s;
+    }
+    .mobile-menu-link:hover, .mobile-menu-link:active { color: var(--amber); }
+    .mobile-menu-phone {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      color: rgba(10,18,10,0.55);
+      letter-spacing: 0.04em;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(10,18,10,0.07);
+      display: block;
+      transition: color 0.2s;
+    }
+    .mobile-menu-phone:hover { color: var(--amber); }
+    .mobile-menu-cta {
+      display: block;
+      text-align: center;
+      margin-top: 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--obsidian);
+      background: var(--amber-bright);
+      padding: 16px 24px;
+      border-radius: 3px;
+    }
+
+    /* ══════════════════════════════════════════
        RESPONSIVE
     ══════════════════════════════════════════ */
     @media (max-width: 1100px) {
@@ -1278,15 +1358,53 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-phone { display: none; }
-      .nav-inner { padding: 0 24px; }
-      .bento-tile--sm, .bento-tile--md { grid-column: span 12; }
-      .bento-tile--wide { grid-column: span 12; grid-template-columns: 1fr; }
+      .nav-actions .btn-cta { display: none; }
+      .nav-burger { display: flex; }
+      .nav-inner { padding: 0 20px; }
+
+      .hero { min-height: 88vh; padding-top: 0; padding-bottom: 80px; }
+      .hero-content { padding: 0 20px; }
+      .hero h1 { font-size: clamp(36px, 10vw, 56px); margin-bottom: 20px; }
+      .hero-sub { font-size: 16px; line-height: 1.7; margin-bottom: 36px; }
+      .hero-actions { flex-direction: column; gap: 12px; }
+      .hero-actions .btn-amber,
+      .hero-actions .btn-ghost-white { text-align: center; padding: 16px 24px; }
+      .hero-scroll-hint { display: none; }
+
+      .wedge, .products, .industries, .services, .about { padding: 80px 0; }
+      .cta-band { padding: 80px 0; }
+      .specs-bar { padding: 56px 0; }
+      .trust { padding: 56px 0; }
+
+      .bento-tile--hero { padding: 36px 28px !important; }
+      .bento-tile--sm, .bento-tile--md { grid-column: span 12; padding: 28px 24px !important; }
+      .bento-tile--wide { grid-column: span 12; grid-template-columns: 1fr; padding: 28px 24px !important; gap: 24px !important; }
+
       .product-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr; }
-      .hero h1 { font-size: clamp(38px, 10vw, 60px); }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+
       .products-header { flex-direction: column; align-items: flex-start; }
+
+      .about-badge {
+        position: static;
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 4px;
+      }
+
+      .section-headline { font-size: clamp(26px, 7.5vw, 40px); }
+      .wedge-header, .products-header, .industries-header, .services-header { margin-bottom: 40px; }
+    }
+    @media (max-width: 480px) {
+      .trust-grid { grid-template-columns: 1fr; }
+      .trust-item { padding: 20px 0; border-bottom: 1px solid rgba(10,18,10,0.06); }
+      .footer-legal { gap: 16px; flex-wrap: wrap; }
+      .cta-actions { flex-direction: column; gap: 12px; }
+      .cta-actions .btn-dark,
+      .cta-actions .btn-ghost-dark { text-align: center; padding: 16px 24px; }
     }
 
     /* ══════════════════════════════════════════
@@ -1341,9 +1459,23 @@
       <div class="nav-actions">
         <a href="tel:6263307151" class="nav-phone">626.330.7151</a>
         <a href="#quote" class="btn-cta">Get a Quote</a>
+        <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#products" class="mobile-menu-link">Products</a>
+    <a href="#" class="mobile-menu-link">Industries</a>
+    <a href="#" class="mobile-menu-link">Services</a>
+    <a href="#" class="mobile-menu-link">About Us</a>
+    <a href="#" class="mobile-menu-link">Resources</a>
+    <a href="tel:6263307151" class="mobile-menu-phone">626.330.7151</a>
+    <a href="#quote" class="mobile-menu-cta">Get a Quote</a>
+  </div>
 
   <!-- ── HERO ── -->
   <section class="hero">
@@ -1662,7 +1794,7 @@
         <h2 class="section-headline">More Than Supply.<br>A Systems Partner.</h2>
       </div>
     </div>
-    <div class="container" style="padding: 0 48px;">
+    <div class="container">
       <div class="services-grid">
 
         <div class="service-tile reveal reveal-delay-1">
@@ -1874,6 +2006,26 @@
   <button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
 
   <script>
+    // ── HAMBURGER MENU ──
+    const burger = document.getElementById('navBurger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
     // ── SCROLL REVEAL ──
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
@@ -1891,9 +2043,11 @@
     const nav = document.querySelector('.nav');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 80) {
-        nav.style.background = 'rgba(10,10,10,0.96)';
+        nav.style.background = 'rgba(255,255,255,0.98)';
+        nav.style.boxShadow = '0 1px 12px rgba(0,0,0,0.06)';
       } else {
-        nav.style.background = 'rgba(10,10,10,0.78)';
+        nav.style.background = '';
+        nav.style.boxShadow = '';
       }
     }, { passive: true });
 
