@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markets — American Oil Products</title>
+  <meta name="description" content="Six end-market super-clusters spanning sixty industries — from Health & Wellness to Industrial Coatings. Every product cross-listed against the markets it serves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── UTILITY BAR ── -->
+  <div class="utility">
+    <div class="utility-inner">
+      <button class="util-burger" aria-label="Open menu" id="openDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7"  x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <a href="index.html" class="util-search" aria-label="Search by CAS number, INCI name, or keyword">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+        <span class="util-search-text">Search by CAS number, INCI name, or keyword</span>
+      </a>
+      <span class="util-divider"></span>
+      <div class="util-actions">
+        <a href="index.html#sds" class="util-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/></svg><span>Request SDS</span></a>
+        <a href="index.html#tds" class="util-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/></svg><span>Request TDS</span></a>
+        <a href="index.html#catalog" class="util-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><line x1="5" y1="20" x2="19" y2="20"/></svg><span>Line Card (PDF)</span></a>
+      </div>
+      <span class="util-divider"></span>
+      <a href="#" class="util-lang" aria-label="Language selector">EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ── MAIN HEADER ── -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="American Oil Products — home">
+        <img class="brand-logo" src="https://americanoilproducts.com/wp-content/uploads/2025/03/american-oil-products-logo.png" alt="American Oil Products">
+        <span class="brand-tag">
+          <span class="brand-tag-name">American Oil Products</span>
+          <span class="brand-tag-line">The Chemistry of Scale</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#portfolio">Product Portfolio <span class="arrow">▾</span></a>
+        <a href="markets.html">Markets <span class="arrow">▾</span></a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="news.html">News</a>
+      </nav>
+      <div class="header-actions">
+        <a href="index.html#suppliers" class="btn btn-ghost-on-deep">Supplier Partners</a>
+        <a href="index.html#quote" class="btn btn-primary btn-arrow">Request a Quote</a>
+        <button class="header-burger" aria-label="Open menu" id="openDrawer2"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── DRAWER (mobile) ── -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <span class="brand-tag-line" style="color: var(--sage);">The Chemistry of Scale</span>
+      <button class="drawer-close" id="closeDrawer" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <a href="index.html#portfolio">Product Portfolio</a>
+      <a href="markets.html">Markets</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="news.html">News</a>
+    </nav>
+    <div class="drawer-util">
+      <a href="index.html">Search by CAS / INCI</a>
+      <a href="index.html#sds">Request SDS</a>
+      <a href="index.html#tds">Request TDS</a>
+      <a href="index.html#catalog">Download Line Card (PDF)</a>
+    </div>
+    <div class="drawer-cta">
+      <a href="index.html#suppliers" class="btn btn-ghost-on-deep" style="justify-content:center;">Supplier Partners</a>
+      <a href="index.html#quote" class="btn btn-primary" style="justify-content:center;">Request a Quote</a>
+    </div>
+  </aside>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="section section--cream" style="padding: 80px 0 32px;">
+    <div class="container">
+      <div style="max-width: 760px;">
+        <span class="eyebrow reveal">Markets Served</span>
+        <h1 class="display reveal delay-1" style="font-size: clamp(40px, 5vw, 64px); margin: 20px 0 20px;">Six end-market super-clusters,<br>sixty industries.</h1>
+        <p class="lede reveal delay-2">Every product is cross-listed against the industries it serves. Start from your sector to see the chemistry available, or start from a product to see where it ships.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARKETS GRID ── -->
+  <section class="section section--cream" id="markets" style="padding-top: 32px;">
+    <div class="container">
+      <div class="markets">
+        <a href="#" class="market-card reveal">
+          <span class="market-num">01 — Cluster</span>
+          <span class="market-name">Health &amp; Wellness</span>
+          <ul class="market-list">
+            <li>Dietary Supplements</li>
+            <li>Nutraceuticals</li>
+            <li>Softgel Encapsulation</li>
+            <li>Sports Nutrition</li>
+            <li>Pharmaceuticals</li>
+            <li>Compounding Pharmacies</li>
+            <li>Veterinary Pharmaceuticals</li>
+            <li>Medical Devices</li>
+            <li>Biotech &amp; Life Sciences</li>
+          </ul>
+          <div class="market-count"><span>12 industries</span><a>Explore cluster</a></div>
+        </a>
+        <a href="#" class="market-card reveal delay-1">
+          <span class="market-num">02 — Cluster</span>
+          <span class="market-name">Personal Care &amp; Cosmetics</span>
+          <ul class="market-list">
+            <li>Cosmetics</li>
+            <li>Skincare</li>
+            <li>Hair Care</li>
+            <li>Soap Making</li>
+            <li>Fragrance &amp; Perfumery</li>
+            <li>Aromatherapy</li>
+            <li>Spa &amp; Wellness</li>
+            <li>Infant Care</li>
+          </ul>
+          <div class="market-count"><span>12 industries</span><a>Explore cluster</a></div>
+        </a>
+        <a href="#" class="market-card reveal delay-2">
+          <span class="market-num">03 — Cluster</span>
+          <span class="market-name">Food, Beverage &amp; Agriculture</span>
+          <ul class="market-list">
+            <li>Food &amp; Beverage Manufacturing</li>
+            <li>Food Packaging</li>
+            <li>Flavor &amp; Fragrance Houses</li>
+            <li>Pet Food</li>
+            <li>Animal Health &amp; Feed</li>
+            <li>Equine &amp; Livestock Supplements</li>
+            <li>Agriculture</li>
+          </ul>
+          <div class="market-count"><span>8 industries</span><a>Explore cluster</a></div>
+        </a>
+        <a href="#" class="market-card reveal">
+          <span class="market-num">04 — Cluster</span>
+          <span class="market-name">Cleaning, Sanitation &amp; Institutional</span>
+          <ul class="market-list">
+            <li>Cleaning Products Manufacturing</li>
+            <li>Sanitation &amp; Hygiene</li>
+            <li>JanSan Distribution</li>
+            <li>Janitorial Contract Services</li>
+          </ul>
+          <div class="market-count"><span>4 industries</span><a>Explore cluster</a></div>
+        </a>
+        <a href="#" class="market-card reveal delay-1">
+          <span class="market-num">05 — Cluster</span>
+          <span class="market-name">Industrial, Coatings &amp; Materials</span>
+          <ul class="market-list">
+            <li>Adhesives &amp; Sealants</li>
+            <li>Paints, Coatings &amp; Surface Finishes</li>
+            <li>Specialty Lubricant Blenders</li>
+            <li>Automotive &amp; Aftermarket</li>
+            <li>Aerospace · Defense</li>
+            <li>Plastics &amp; Polymers</li>
+            <li>Candle &amp; Wax Melt Manufacturing</li>
+          </ul>
+          <div class="market-count"><span>23 industries</span><a>Explore cluster</a></div>
+        </a>
+        <a href="#" class="market-card reveal delay-2">
+          <span class="market-num">06 — Cluster</span>
+          <span class="market-name">Specialty Markets</span>
+          <ul class="market-list">
+            <li>Funeral Services &amp; Mortuary Supply</li>
+          </ul>
+          <div class="market-count"><span>1 industry</span><a>Explore cluster</a></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="brand-logo" src="https://americanoilproducts.com/wp-content/uploads/2025/03/american-oil-products-logo.png" alt="American Oil Products" style="filter: brightness(0) invert(1); opacity: .9;">
+          <p>Wholesale chemical distribution and processing. Specification-grade oils, waxes, and specialty chemicals — sourced direct, warehoused locally, delivered at volume. Family-owned since 1997.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product Categories</h4>
+          <ul>
+            <li><a href="#">Solvents</a></li>
+            <li><a href="#">Oleochemicals</a></li>
+            <li><a href="#">Waxes</a></li>
+            <li><a href="#">Petrolatums &amp; Mineral Oils</a></li>
+            <li><a href="#">Surfactants</a></li>
+            <li><a href="#">Additives &amp; Modifiers</a></li>
+            <li><a href="#">Acids</a></li>
+            <li><a href="#">Essential Oils &amp; Fragrances</a></li>
+            <li><a href="#">Botanical Ingredients</a></li>
+            <li><a href="#">Exfoliants &amp; Clays</a></li>
+            <li><a href="#">Process Fluids</a></li>
+            <li><a href="#">Finished Formulations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Markets</h4>
+          <ul>
+            <li><a href="markets.html">Health &amp; Wellness</a></li>
+            <li><a href="markets.html">Personal Care &amp; Cosmetics</a></li>
+            <li><a href="markets.html">Food, Beverage &amp; Agriculture</a></li>
+            <li><a href="markets.html">Cleaning &amp; Sanitation</a></li>
+            <li><a href="markets.html">Industrial &amp; Coatings</a></li>
+            <li><a href="markets.html">Specialty Markets</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Capabilities</h4>
+          <ul>
+            <li><a href="index.html#services">Toll Blending &amp; Compounding</a></li>
+            <li><a href="index.html#services">Private Label &amp; Filling</a></li>
+            <li><a href="index.html#services">Product Repackaging</a></li>
+            <li><a href="index.html#services">IBC Tote Washing</a></li>
+            <li><a href="index.html#compliance">Quality &amp; Compliance</a></li>
+            <li><a href="#">In-House Fleet &amp; Logistics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="index.html#suppliers">Supplier Partners</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="index.html#quote">Request a Quote</a></li>
+            <li><a href="tel:6263307151">626.330.7151</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>© 1997–2026 American Oil Products. 13226 Nelson Avenue, City of Industry, CA 91746.</span>
+        <nav aria-label="Legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── MOBILE STICKY CTA ── -->
+  <div class="mobile-cta" aria-hidden="false">
+    <div class="mobile-cta-inner">
+      <a href="tel:6263307151" class="mobile-cta-call">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a href="index.html#quote" class="mobile-cta-quote">Request a Quote</a>
+    </div>
+  </div>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
